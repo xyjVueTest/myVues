@@ -45,7 +45,18 @@
     <div class="autoclear-input">
       <label for="name">{{label}}：</label>
       <input style="display: none;">
-      <input :type="type" :disabled="disabled" :readonly="readonly" @change="$emit('change', currentValue)"  id="name" ref="inputclear" @input="currentValue = $event.target.value;" :value="currentValue" @focus="isClear=true" @blur="isClear=false" :maxlength="maxlength" :placeholder="placeholder">
+      <input
+        :type="type"
+        :disabled="disabled"
+        :readonly="readonly"
+        @change="$emit('change', currentValue)"
+        id="name" ref="inputclear"
+        @input="currentValue = $event.target.value;"
+        :value="currentValue"
+        @focus="isClear=true"
+        @blur="isClear=false"
+        :maxlength="maxlength"
+        :placeholder="placeholder">
       <div @click="clear" @touchstart="clear">
         <i class="clear"  v-show="isClear && currentValue">X</i>
       </div>

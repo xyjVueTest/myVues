@@ -13,7 +13,7 @@
 <template>
   <div class="page-vpie">
     <h5>{{msg}}</h5>
-    <div id="vPie" @click="full">
+    <div id="vPie">
       <ve-pie :data="chartData" :settings="chartSettings" :events="chartEvents" tooltip-visible legend-visible></ve-pie>
     </div>
     <p>被点击日期：{{ name }}</p>
@@ -63,7 +63,7 @@
       }
     },
     methods: {
-      launchFullScreen (element) {
+      launchFullScreen (element) { // 测试全屏失败！
         if (element.requestFullscreen) {
           element.requestFullscreen()
         } else if (element.mozRequestFullScreen) {

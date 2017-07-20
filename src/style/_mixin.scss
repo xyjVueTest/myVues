@@ -1,0 +1,21 @@
+@mixin border($direction: bottom, $borderColor: $border-color) {
+
+  background-repeat: no-repeat;
+  @if $direction == top or $direction == bottom {
+    background-size: 100% 1px;
+    background-position: $direction left;
+    @if $direction == top {
+      background-image: linear-gradient(180deg, $borderColor, $borderColor 50%, transparent 50%);
+    } @else {
+      background-image: linear-gradient(360deg, $borderColor, $borderColor 50%, transparent 50%);
+    }
+  } @else if $direction == right or $direction == left {
+    background-size: 1px 100%;
+    background-position: bottom $direction;
+    @if $direction = right {
+      background-image: linear-gradient(270deg, $borderColor, $borderColor 50%, transparent 50%);
+    } @else {
+      background-image: linear-gradient(90deg, $borderColor, $borderColor 50%, transparent 50%);
+    }
+  }
+}

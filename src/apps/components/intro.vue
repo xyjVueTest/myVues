@@ -1,15 +1,5 @@
 <style type="text/scss" lang="scss">
   .page-components{
-    .go-left{
-      position:absolute;
-      right: .1rem;
-      top: .15rem;
-      display: block;
-      width:.08rem;
-      height:.13rem;
-      background: url(../../assets/imgs/commoms/icon_right@3x.png) no-repeat;
-      background-size:contain;
-    }
     li{
       position:relative;
       font-size:.18rem;
@@ -36,7 +26,10 @@
       return {
         list: [
           {name: 'InputAutoClear', path: {path: '/hanz/components/inputClear'}},
-          {name: 'Alert', path: {path: '/hanz/components/alert'}}
+          {name: 'Alert', path: {path: '/hanz/components/alert'}},
+          {name: 'Search', path: {path: '/hanz/components/searchClear'}},
+          {name: 'Pages分页', path: {path: '/hanz/components/pages'}},
+          {name: 'popup弹出框', path: {path: '/hanz/components/popup'}}
         ]
       }
     },

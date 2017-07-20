@@ -7,6 +7,8 @@
 </template>
 
 <script>
+  import MyChart from 'chart.js'
+  window.MyChart = MyChart
   export default {
     name: 'hello',
     data () {
